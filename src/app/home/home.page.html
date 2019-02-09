@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Tasa Filtración Glomerular
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-item>
+        <ion-input placeholder="Edad" type="number" [(ngModel)]="edad"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-input placeholder="Creatinina mg/dL" type="number" [(ngModel)]="creatinina"></ion-input>
+    </ion-item>
+    <ion-list>
+        <ion-radio-group [(ngModel)]="sexo">
+          <ion-list-header>
+            Sexo
+          </ion-list-header>
+      
+          <ion-item>
+            <ion-label>Femenino</ion-label>
+            <ion-radio value="F"></ion-radio>
+          </ion-item>
+      
+          <ion-item>
+            <ion-label>Masculino</ion-label>
+            <ion-radio value="M"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-list>
+      <ion-list>
+          <ion-radio-group [(ngModel)]="raza">
+            <ion-list-header>
+              Raza
+            </ion-list-header>
+        
+            <ion-item>
+              <ion-label>Blanco</ion-label>
+              <ion-radio value="B" selected></ion-radio>
+            </ion-item>
+        
+            <ion-item>
+              <ion-label>Afro</ion-label>
+              <ion-radio value="A"></ion-radio>
+            </ion-item>
+          </ion-radio-group>
+        </ion-list>
+        <ion-button color="primary" expand="block" (click)="calcular()">Calcular</ion-button>
+        <ion-button color="danger" expand="block" (click)="limpiar()">Limpiar</ion-button>
+</ion-content>
